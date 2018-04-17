@@ -1,0 +1,26 @@
+[33mcommit 52b57ddf53ce427989395b20f589e3d2aa4f5dbc[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mtestBranch[m[33m)[m
+Merge: cd6d0fb f0cfa25
+Author: jimconwa <jimconwa@iu.edu>
+Date:   Mon Apr 9 20:04:19 2018 -0400
+
+    Merge pull request #1 from mggilchr/New-Branch
+    
+    Add files via upload
+
+[33mcommit f0cfa2594b113675bc937ae72a741a751d9ca85d[m[33m ([m[1;31morigin/New-Branch[m[33m)[m
+Author: jimconwa <jimconwa@iu.edu>
+Date:   Mon Apr 9 20:03:49 2018 -0400
+
+    Add files via upload
+
+[33mcommit cd6d0fb78944e4e66cd62aef5197532aa228fde2[m
+Author: jimconwa <jimconwa@iu.edu>
+Date:   Mon Apr 9 19:28:33 2018 -0400
+
+    Add files via upload
+
+[33mcommit eaba5d2d6aed47a5e2d7a8e92cec012e4824c722[m
+Author: mggilchr <mggilchr@iu.edu>
+Date:   Mon Apr 9 19:05:18 2018 -0400
+
+    Initial commit
