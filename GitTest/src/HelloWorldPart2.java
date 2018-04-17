@@ -5,5 +5,6 @@ public class HelloWorldPart2
 	{
 		int j = 0;
 		System.out.println("Hello World(Part 2)");
+		System.out.println("This is an update");
 	}
 }
