@@ -2,12 +2,17 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public static class Login 
+public class Login 
 {
 	private String username;
 	private String password;
 	private Scanner sc;
 	PrintWriter output;
+	
+	public Login(String username, String password)
+	{
+		
+	}
 	
 	public void addUser(String username, String password)
 	{
