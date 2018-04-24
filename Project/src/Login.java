@@ -78,4 +78,15 @@ public class Login
 		//Login.addUser(); //Uncomment to test adding credentials
 		Login.login();
 	}
+	
+	public static void login(String username, String password)
+	{
+		try {
+			fileReader = new Scanner(new File("login.txt"));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
 }
