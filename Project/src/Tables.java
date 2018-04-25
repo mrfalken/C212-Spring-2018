@@ -40,7 +40,7 @@ public class Tables
 	{
 		for (int i = 0; i < seatingChart.size(); i ++)
 		{
-			System.out.print(seatingChart.get(i));
+			System.out.println(seatingChart.get(i));
 		}
 	}
 	
