@@ -21,7 +21,7 @@ public class Payment
 		subtotal = 0;//finalOrder.getPrice();
 	}
 	
-	public double getSubtotal() //hi
+	public double getSubtotal() 
 	{
 		return subtotal;
 	}
