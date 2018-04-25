@@ -24,7 +24,7 @@ public class Main
 			
 			if (o == 1)
 			{
-				
+				Order.placeOrder();
 			}
 			else if (o == 2)
 			{

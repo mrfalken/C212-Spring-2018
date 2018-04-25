@@ -59,5 +59,20 @@ public class Tables
 			}
 		}
 	}
+	
+	public static Tables getTableByNum(int n)
+	{
+		for (int i = 0; i < seatingChart.size(); i++)
+		{
+			if(n == seatingChart.get(i).tableNum)
+			{
+				return seatingChart.get(i);
+			}
+		
+		}
+				System.out.println("Table number" + n + " does not exist");
+				return null;
+	
+	}
 
 }
