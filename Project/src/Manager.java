@@ -10,8 +10,6 @@ public class Manager
 	
 	public Manager(String user, String pass)
 	{
-		user = "manager";
-		pass = "manager";
 		Login.login();
 	}
 	
