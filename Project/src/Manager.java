@@ -8,24 +8,27 @@ public class Manager
 	public Manager()
 	{ }
 	
-	public Manager(String user, String pass)
+	public String managerPin(int pin)
 	{
-		Login.login();
-	}
-	
-	public void changeServerPassword(int n)
-	{
+		String yes = "Access Granted";
+		String no = "Access Denied";
 		
+		if(pin == 4321) 
+		{
+			return yes;
+		}
+		else
+			return no;
 	}
 	
-	public void addServer(ArrayList s)
+	public void addServer(String s, ArrayList a)
 	{
-		
+		a.add(s);
 	}
 	
-	 public void deleteServer(ArrayList s)
+	 public void deleteServer(String s, ArrayList a)
 	 {
-		 
+		 a.remove(s);
 	 }
 	
 	 public double applyDiscount(int n)
@@ -35,9 +38,4 @@ public class Manager
 		 total = n - total;
 		 return total;
 	 }
-	
-	public void changeOrder(Order o)
-	{
-		
-	}
 }
