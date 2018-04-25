@@ -1,8 +1,16 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class Order 
 {
-
-
+	private Tables table;
+	private ArrayList<MenuItem> entrees;
+	private ArrayList<MenuItem> side;
+	
+	public Order(Tables t, ArrayList<MenuItem> entre, ArrayList<MenuItem> si) 
+	{ 
+		entrees = entre;
+		side = si;
+	}
 
 	//creating 22 menu object with 10 entrees and 12 sides
 	MenuItem pizza = new MenuItem("Pizza",10.00,false);
@@ -40,11 +48,47 @@ public class Order
 	
 	public void addEntree(String s) {
 			Scanner scan = new Scanner(System.in);
-			System.out.println("Which entree would you like to choose?");
 			Order e = new Order();
 			e.printEntree();
-			s = scan.next();
 			
+		while (!(s.equals("q")))
+		{
+			System.out.println("Which entree would you like to add? Press q to quit when done adding entrees");
+			s = scan.next();
+		if (s.equalsIgnoreCase("pizza")) 
+		{
+			
+		}
+		else if (s.equalsIgnoreCase("burger")) {
+
+		}
+		else if (s.equalsIgnoreCase("lobster")) {
+
+		}
+		else if (s.equalsIgnoreCase("chicken")) {
+
+		}
+		else if (s.equalsIgnoreCase("spaghetti")) {
+
+		}
+		else if (s.equalsIgnoreCase("steak")) {
+
+		}
+		else if (s.equalsIgnoreCase("ribs")) {
+
+		}
+		else if (s.equalsIgnoreCase("lamb")) {
+
+		}
+		else if (s.equalsIgnoreCase("sushi")) {
+
+		}
+		else if (s.equalsIgnoreCase("fish")) {
+
+		}
+		
+	
+		}
 	}
 	public void addSide(String s) {
 
