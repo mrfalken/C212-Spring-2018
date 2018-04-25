@@ -1,20 +1,20 @@
 class  MenuItem{
     private String itemName;
     private double price;
-    private boolean entree;
+    private boolean side;
 
     
     public MenuItem() {
         itemName="";
         price=0.00;
-        entree=false;
+        side=true;
 
     }
 
-    public MenuItem(String itemName, double price, boolean entree) {
+    public MenuItem(String itemName, double price, boolean side) {
         this.itemName = itemName;
         this.price = price;
-        this.entree = entree;
+        this.side = side;
     }
 
     public String getItemName() {
@@ -33,11 +33,16 @@ class  MenuItem{
         this.price = price;
     }
 
-    public boolean isEntree() {
-        return entree;
+    public boolean isSide() {
+        return side;
     }
 
-    public void setEntree(boolean entree) {
-        this.entree = entree;
+    public void setSide(boolean side) {
+        this.side = side;
+    }
+    
+    public String toString()
+    {
+    	return this.itemName + " $" + this.price;
     }
 }
