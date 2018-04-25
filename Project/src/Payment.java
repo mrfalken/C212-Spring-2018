@@ -21,9 +21,19 @@ public class Payment
 		subtotal = 0;//finalOrder.getPrice();
 	}
 	
+	public double getSubtotal() //hi
+	{
+		return subtotal;
+	}
+	
 	public void calculateTax()
 	{
 		 tax = subtotal*TAX_PERCENT;
+	}
+	
+	public double getTax()
+	{
+		return tax;
 	}
 	
 	public void calculateGratuity(double tip)
@@ -31,9 +41,19 @@ public class Payment
 		gratuity = tip;
 	}
 	
+	public double getGratuity()
+	{
+		return gratuity;
+	}
+	
 	public void calculateTotal()
 	{
 		total += subtotal+tax+gratuity;
+	}
+	
+	public double getTotal()
+	{
+		return total;
 	}
 	
 	public void getPaymentType(String type)
