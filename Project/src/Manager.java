@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Manager 
+public class Manager extends Login
 {
 	private String order;
 	
@@ -23,11 +23,13 @@ public class Manager
 	
 	public void addServer(String s, ArrayList a)
 	{
+		Login.addUser();
 		a.add(s);
 	}
 	
 	 public void deleteServer(String s, ArrayList a)
 	 {
+		 //Login.removeUser();
 		 a.remove(s);
 	 }
 	
