@@ -19,6 +19,8 @@ public class Main
 			System.out.println("3. Change Order");
 			System.out.println("4. Seat Table");
 			System.out.println("5. Clear Table");
+			
+			///MANAGER _ADD/DELETE SERVERS // APPLY DISCOUNTS TO BILL (Any discount)//
 			System.out.println("6. Logout");
 			int o = keyboard.nextInt();
 			

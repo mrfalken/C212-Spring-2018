@@ -162,7 +162,7 @@ public class Order
 				side.add(spinach);
 			}
 			else if (si.equalsIgnoreCase("rice")) {
-				System.out.println("RIBZZZZ");
+			
 				side.add(rice);
 			}
 			else if (si.equalsIgnoreCase("mashed potatoes")) {
@@ -194,27 +194,185 @@ public class Order
 
 
 		Order o = new Order(t,entrees,side);
-		System.out.println("Here is the order you placed " + o);
-		return o;
+		System.out.println("Here is the order you input: " + o);
+		
+		
+		System.out.println("Would you like to edit the order? Y or N: ");
+		String f  = scan.next();
+		
+		
+		//if edit
+		if (f.equalsIgnoreCase("y"))
+		{
+			System.out.println("Would you like to delete something from the order? Y or N: ");
+			String d  = scan.next();
+			
+			if (d.equalsIgnoreCase("y")) //delete
+			{
+				System.out.println("Would you like to delete an Entree from the order? Y or N: ");
+				String delEntr  = scan.next();
+				
+				if (delEntr.equalsIgnoreCase("y")) //delete specific entree
+				{
+					System.out.println("Please enter the name of the Entree you would like to Delete: ");
+					String del = scan.next();
+					deleteEntree(del);
+				}
+				else if (delEntr.equalsIgnoreCase("n")) // dont delete entree
+				{
+					
+				}
+				
+				else // invalid input Y or N
+				{
+					System.out.println("Invalid input. Would you like to delete an Entree to the order? Y or N: ");
+					delEntr  = scan.next();
+				}
+				
+			}
+			
+			
+			//DELETE SIDE
+			System.out.println("Would you like to delete an Side from the order? Y or N: ");
+			String delS  = scan.next();
+			
+			if (delS.equalsIgnoreCase("y")) //delete specific Side
+			{
+				System.out.println("Please enter the name of the Side you would like to Delete: ");
+				String del2 = scan.next();
+				deleteSide(del2);
+			}
+			else if (delS.equalsIgnoreCase("n")) // dont delete Side
+			{
+				
+			}
+			
+			else // invalid input Y or N
+			{
+				System.out.println("Invalid input. Would you like to delete a Side to the order? Y or N: ");
+				delS  = scan.next();
+			}
+			
+			///////////////////////////////////////////////////////////////////////////////////////////////////////
+			
+			
+				//Add to order
+			System.out.println("Would you like to Add something to the order? Y or N: ");
+			String add  = scan.next();
+			
+			if (add.equalsIgnoreCase("y")) //add
+			{
+				System.out.println("Would you like to add an Entree to the order? Y or N: ");
+				String adEntr  = scan.next();
+				
+				if (adEntr.equalsIgnoreCase("y")) //add specific entree
+				{
+					System.out.println("Please enter the name of the Entree you would like to Add: ");
+					String add2 = scan.next();
+					addEntree(add2);
+				}
+				else if (adEntr.equalsIgnoreCase("n")) // dont add entree
+				{
+					
+				}
+				
+				else // invalid input Y or N
+				{
+					System.out.println("Invalid input. Would you like to add an Entree to the order? Y or N: ");
+					adEntr  = scan.next();
+				}
+				
+				
+			}
+			
+			
+			//ADD SIDE
+			System.out.println("Would you like to add a Side to the order? Y or N: ");
+			String addS  = scan.next();
+			
+			if (addS.equalsIgnoreCase("y")) //add specific Side
+			{
+				System.out.println("Please enter the name of the Side you would like to add: ");
+				String add3 = scan.next();
+				addSide(add3);
+			}
+			else if (addS.equalsIgnoreCase("n")) // dont delete entree
+			{
+				
+			}
+			
+			else // invalid input Y or N
+			{
+				System.out.println("Invalid input. Would you like to add a Side to the order? Y or N: ");
+				addS  = scan.next();
+			}
+			
+			
+			
+			
+			////////////////////////////////////////////////////////////////////////////////////////////////////////
+			
+			//Submit order after editing
+			System.out.println("Here is the edited order: " + o);
+			System.out.println("Order has been sent to the kitchen!");
+			return o;
+		}
+			
+			
+			else if (f.equalsIgnoreCase("n")) // no need to edit
+			{
+				System.out.println("Order has been sent to the kitchen!");
+				return o;
+			}
+			else // not yes or no
+			{
+				System.out.println("Invalid input. Would you like to edit the order? Y or N: ");
+				f  = scan.next();
+			}
+				
+		return o; // Catch-all Return Case 
+		
 	}
 
-	public void deleteEntree(String s) 
+	public static void deleteEntree(String s) 
 	{	
 		for (int i = 0; i < entrees.size(); i ++)
 		{
-			if (entrees.get(i).getItemName().equals(s))
+			if (entrees.get(i).getItemName().equalsIgnoreCase(s))
 				entrees.remove(i);
 		}
 
 
 	}
-	public void deleteSide(String s) 
+	public static void deleteSide(String s) 
 	{
 		for (int i = 0; i < side.size(); i ++)
 		{
-			if (side.get(i).getItemName().equals(s))
+			if (side.get(i).getItemName().equalsIgnoreCase(s))
 				side.remove(i);
 		}
+
+	}
+	
+	
+	public static void addEntree(String s) 
+	{	
+		for (int i = 0; i < menu.length; i ++)
+		{
+			if (menu[i].getItemName().equalsIgnoreCase(s))
+				entrees.add(menu[i]);
+		}
+
+
+	}
+	public static void addSide(String s) 
+	{
+		for (int i = 0; i < menu.length; i ++)
+		{
+			if (menu[i].getItemName().equalsIgnoreCase(s))
+				side.add(menu[i]);
+		}
+
 
 	}
 
@@ -235,30 +393,10 @@ public class Order
 		return str;
 
 	}
-	/*
-	public void printSide()
-	{
 
-		for (int i =0; i < menu.length; i++ ) {
-				if (menu[i].isSide())
-				{
-					System.out.println(menu[i]);
-				}
-		}
-	}
-
-	public void printEntree()
-	{
-		for (int i = 0; i < menu.length; i++) {
-			if(!(menu[i].isSide())) {
-				System.out.println(menu[i]);
-			}
-		}
-	}
-
-
-	 */
-
+	
+	//MAX Make all final variables All Caps
+//ADD While loops to edit statements
 
 
 }
