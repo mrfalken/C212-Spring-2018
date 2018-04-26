@@ -375,6 +375,16 @@ public class Order
 
 
 	}
+	
+	public ArrayList<MenuItem> getEntrees()
+	{
+		return entrees;
+	}
+	
+	public ArrayList<MenuItem> getSides()
+	{
+		return side;
+	}
 
 
 	public String toString()
