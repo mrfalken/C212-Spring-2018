@@ -14,7 +14,7 @@ public class Table
 	{
 		Scanner s = new Scanner(System.in);
 		
-
+		
 		
 		while (seatsF >= 4 && seatsF <= 0)
 		{
