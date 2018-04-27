@@ -41,10 +41,9 @@ public class Order
 
 	//assigning the items to  menu array 
 
-	public static Order placeOrder() {
-		System.out.println("Which table number would you like to place an entree for? ");
+	public static Order placeOrder(int tn) 
+	{
 		Scanner scan = new Scanner(System.in);
-		int tn = scan.nextInt();
 		while (tn > 30 || tn < 1)
 		{
 			System.out.println("The Table you selected does not exist. Please enter a Table number between 0-29: ");
