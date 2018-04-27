@@ -14,30 +14,30 @@ public class Order
 
 	//creating 22 menu object with 10 entrees and 12 sides
 	private final static MenuItem PIZZA = new MenuItem("Pizza",10.00,false); //change all to CAPS
-	private final static MenuItem burger = new MenuItem("Burger",15.00,false);
-	private final static MenuItem lobster = new MenuItem("Lobster",25.00,false);
-	private final static MenuItem chicken = new MenuItem("Chicken",12.00,false);
-	private final static MenuItem spaghetti = new MenuItem("Spaghetti",8.00,false);
-	private final static MenuItem steak = new MenuItem("Steak",27.00,false);
-	private final static MenuItem ribs = new MenuItem("Ribs",16.00,false);
-	private final static MenuItem lamb = new MenuItem("Lamb",22.00,false);
-	private final static MenuItem sushi = new MenuItem("Sushi",13.00,false);
-	private final static MenuItem fish = new MenuItem("Fish",23.00,false);
-	private final static MenuItem mac = new MenuItem("Mac",7.00,true);
-	private final static MenuItem soup = new MenuItem("Soup",6.00,true);
-	private final static MenuItem salad = new MenuItem("Salad",5.00,true);
-	private final static MenuItem fries = new MenuItem("Fries",3.00,true);
-	private final static MenuItem chips = new MenuItem("Chips",2.00,true);
-	private final static MenuItem spinach = new MenuItem("Spinach",2.00,true);
-	private final static MenuItem rice = new MenuItem("Rice",3.00,true);
-	private final static MenuItem mashed = new MenuItem("Potatoes",5.00,true);
-	private final static MenuItem applesauce = new MenuItem("Applesauce",2.00,true);
-	private final static MenuItem coleslaw = new MenuItem("Coleslaw",3.00,true);
-	private final static MenuItem bread = new MenuItem("Bread",3.00,true);
-	private final static MenuItem beans = new MenuItem("Beans",7.00,true);
+	private final static MenuItem BURGER = new MenuItem("Burger",15.00,false);
+	private final static MenuItem LOBSTER = new MenuItem("Lobster",25.00,false);
+	private final static MenuItem CHICKEN = new MenuItem("Chicken",12.00,false);
+	private final static MenuItem SPAGHETTI = new MenuItem("Spaghetti",8.00,false);
+	private final static MenuItem STEAK = new MenuItem("Steak",27.00,false);
+	private final static MenuItem RIBS = new MenuItem("Ribs",16.00,false);
+	private final static MenuItem LAMB = new MenuItem("Lamb",22.00,false);
+	private final static MenuItem SUSHI = new MenuItem("Sushi",13.00,false);
+	private final static MenuItem FISH = new MenuItem("Fish",23.00,false);
+	private final static MenuItem MAC = new MenuItem("Mac",7.00,true);
+	private final static MenuItem SOUP = new MenuItem("Soup",6.00,true);
+	private final static MenuItem SALAD = new MenuItem("Salad",5.00,true);
+	private final static MenuItem FRIES = new MenuItem("Fries",3.00,true);
+	private final static MenuItem CHIPS = new MenuItem("Chips",2.00,true);
+	private final static MenuItem SPINACH = new MenuItem("Spinach",2.00,true);
+	private final static MenuItem RICE = new MenuItem("Rice",3.00,true);
+	private final static MenuItem MASHED = new MenuItem("Potatoes",5.00,true);
+	private final static MenuItem APPLESAUCE = new MenuItem("Applesauce",2.00,true);
+	private final static MenuItem COLESLAW = new MenuItem("Coleslaw",3.00,true);
+	private final static MenuItem BREAD = new MenuItem("Bread",3.00,true);
+	private final static MenuItem BEANS = new MenuItem("Beans",7.00,true);
 
-	final static MenuItem[] menu = {PIZZA, burger, lobster, chicken, spaghetti, steak, ribs, lamb, sushi, fish,
-			mac, soup, salad, fries, chips, spinach, rice, mashed, applesauce, coleslaw, bread, beans};
+	final static MenuItem[] menu = {PIZZA, BURGER, LOBSTER, CHICKEN, SPAGHETTI, STEAK, RIBS, LAMB, SUSHI, FISH,
+			MAC, SOUP, SALAD, FRIES, CHIPS, SPINACH, RICE, MASHED, APPLESAUCE, COLESLAW, BREAD, BEANS};
 
 	//assigning the items to  menu array 
 
@@ -99,34 +99,34 @@ public class Order
 			}
 			else if (s.equalsIgnoreCase("burger")) 
 			{
-				entrees.add(burger);
+				entrees.add(BURGER);
 			}
 			else if (s.equalsIgnoreCase("lobster")) 
 			{
-				entrees.add(lobster);
+				entrees.add(LOBSTER);
 			}
 			else if (s.equalsIgnoreCase("chicken")) 
 			{
-				entrees.add(chicken);
+				entrees.add(CHICKEN);
 			}
 			else if (s.equalsIgnoreCase("spaghetti")) {
-				entrees.add(spaghetti);
+				entrees.add(SPAGHETTI);
 			}
 			else if (s.equalsIgnoreCase("steak")) {
-				entrees.add(steak);
+				entrees.add(STEAK);
 			}
 			else if (s.equalsIgnoreCase("ribs")) {
 
-				entrees.add(ribs);
+				entrees.add(RIBS);
 			}
 			else if (s.equalsIgnoreCase("lamb")) {
-				entrees.add(lamb);
+				entrees.add(LAMB);
 			}
 			else if (s.equalsIgnoreCase("sushi")) {
-				entrees.add(sushi);
+				entrees.add(SUSHI);
 			}
 			else if (s.equalsIgnoreCase("fish")) {
-				entrees.add(fish);
+				entrees.add(FISH);
 			}
 			else if (s.equalsIgnoreCase("q"))
 			{
@@ -154,44 +154,44 @@ public class Order
 
 			if (si.equalsIgnoreCase("mac")) 
 			{
-				side.add(mac);
+				side.add(MAC);
 			}
 			else if (si.equalsIgnoreCase("soup")) 
 			{
-				side.add(soup);
+				side.add(SOUP);
 			}
 			else if (si.equalsIgnoreCase("salad")) 
 			{
-				side.add(salad);
+				side.add(SALAD);
 			}
 			else if (si.equalsIgnoreCase("fries")) 
 			{
-				side.add(fries);
+				side.add(FRIES);
 			}
 			else if (si.equalsIgnoreCase("chips")) {
-				side.add(chips);
+				side.add(CHIPS);
 			}
 			else if (si.equalsIgnoreCase("spinach")) {
-				side.add(spinach);
+				side.add(SPINACH);
 			}
 			else if (si.equalsIgnoreCase("rice")) {
 			
-				side.add(rice);
+				side.add(RICE);
 			}
 			else if (si.equalsIgnoreCase("potatoes")) {
-				side.add(mashed);
+				side.add(MASHED);
 			}
 			else if (si.equalsIgnoreCase("applesauce")) {
-				side.add(applesauce);
+				side.add(APPLESAUCE);
 			}
 			else if (si.equalsIgnoreCase("coleslaw")) {
-				side.add(coleslaw);
+				side.add(COLESLAW);
 			}
 			else if (si.equalsIgnoreCase("bread")) {
-				side.add(bread);
+				side.add(BREAD);
 			}
 			else if (si.equalsIgnoreCase("beans")) {
-				side.add(beans);
+				side.add(BEANS);
 			}
 			else if (si.equalsIgnoreCase("q"))
 			{
