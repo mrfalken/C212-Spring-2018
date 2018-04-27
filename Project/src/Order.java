@@ -2,24 +2,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Order 
 {
-	private Tables table;
+	private Table table;
 	private static ArrayList<MenuItem> entrees = new ArrayList<MenuItem>();
 	private static ArrayList<MenuItem> side= new ArrayList<MenuItem>();
 
-	public Order(Tables t, ArrayList<MenuItem> entre, ArrayList<MenuItem> si) 
+	public Order(Table t, ArrayList<MenuItem> entre, ArrayList<MenuItem> si) 
 	{ 
 		entrees = entre;
 		side = si;
 	}
 
 	//creating 22 menu object with 10 entrees and 12 sides
-	private final static MenuItem pizza = new MenuItem("Pizza",10.00,false);
-
+	private final static MenuItem PIZZA = new MenuItem("Pizza",10.00,false); //change all to CAPS
 	private final static MenuItem burger = new MenuItem("Burger",15.00,false);
 	private final static MenuItem lobster = new MenuItem("Lobster",25.00,false);
 	private final static MenuItem chicken = new MenuItem("Chicken",12.00,false);
 	private final static MenuItem spaghetti = new MenuItem("Spaghetti",8.00,false);
-
 	private final static MenuItem steak = new MenuItem("Steak",27.00,false);
 	private final static MenuItem ribs = new MenuItem("Ribs",16.00,false);
 	private final static MenuItem lamb = new MenuItem("Lamb",22.00,false);
@@ -28,20 +26,17 @@ public class Order
 	private final static MenuItem mac = new MenuItem("Mac",7.00,true);
 	private final static MenuItem soup = new MenuItem("Soup",6.00,true);
 	private final static MenuItem salad = new MenuItem("Salad",5.00,true);
-
 	private final static MenuItem fries = new MenuItem("Fries",3.00,true);
 	private final static MenuItem chips = new MenuItem("Chips",2.00,true);
 	private final static MenuItem spinach = new MenuItem("Spinach",2.00,true);
 	private final static MenuItem rice = new MenuItem("Rice",3.00,true);
-
 	private final static MenuItem mashed = new MenuItem("Potatoes",5.00,true);
 	private final static MenuItem applesauce = new MenuItem("Applesauce",2.00,true);
-
 	private final static MenuItem coleslaw = new MenuItem("Coleslaw",3.00,true);
 	private final static MenuItem bread = new MenuItem("Bread",3.00,true);
 	private final static MenuItem beans = new MenuItem("Beans",7.00,true);
 
-	final static MenuItem[] menu = {pizza, burger, lobster, chicken, spaghetti, steak, ribs, lamb, sushi, fish,
+	final static MenuItem[] menu = {PIZZA, burger, lobster, chicken, spaghetti, steak, ribs, lamb, sushi, fish,
 			mac, soup, salad, fries, chips, spinach, rice, mashed, applesauce, coleslaw, bread, beans};
 
 	//assigning the items to  menu array 
@@ -50,12 +45,31 @@ public class Order
 		System.out.println("Which table number would you like to place an entree for? ");
 		Scanner scan = new Scanner(System.in);
 		int tn = scan.nextInt();
-		Tables t = Tables.getTableByNum(tn);
+		while (tn > 30 || tn < 1)
+		{
+			System.out.println("The Table you selected does not exist. Please enter a Table number between 0-29: ");
+			tn = scan.nextInt();
+		}
+		{
+			System.out.println("The Table you selected is empty, please choose a Table Number that has people at it: ");
+			SeatingChart.printChart();
+			tn = scan.nextInt();
+
+		}
+		while (SeatingChart.getTables().get(tn).getSeatsFilled() == 0)
+		{
+			System.out.println("The Table you selected is empty, please choose a Table Number that has people at it: ");
+			SeatingChart.printChart();
+			tn = scan.nextInt();
+
+		}
+		
+		Table t = SeatingChart.getTableByNum(tn);
 		while (t == null)
 		{
 			System.out.print("Which table number would you like to place an entree for? ");
 			tn = scan.nextInt();
-			t = Tables.getTableByNum(tn);
+			t = SeatingChart.getTableByNum(tn);
 		}
 
 
@@ -82,7 +96,7 @@ public class Order
 			String s = scan.next();
 			if (s.equalsIgnoreCase("pizza")) 
 			{
-				entrees.add(pizza);
+				entrees.add(PIZZA);
 			}
 			else if (s.equalsIgnoreCase("burger")) 
 			{
