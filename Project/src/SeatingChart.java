@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class SeatingChart 
 {
 	private static ArrayList <Table> tables = new ArrayList<Table>();
+	private static ArrayList <Table> previousTable =  new ArrayList <Table>();
 	
 	public SeatingChart (ArrayList<Table> t)
 	{
@@ -14,10 +15,7 @@ public class SeatingChart
 		
 		for (int i = 0; i <= 29; i++)
 		{
-			
 			tables.add(new Table(i, 0));
-			
-			
 		}
 		return tables;
 
@@ -39,7 +37,7 @@ public class SeatingChart
 		{
 			if (tables.get(i).getTableNum() == n)
 			{
-				tables.remove(i);
+				previousTable.add(tables.remove(i));
 			}
 		}
 	}

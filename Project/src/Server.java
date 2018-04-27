@@ -6,7 +6,7 @@ public class Server
 	public Server()
 	{ }
 	
-	public void viewTables()
+	public void viewPreviousTables()
 	{
 		
 	}
