@@ -91,7 +91,7 @@ public class Payment
 		ArrayList<MenuItem> sides = new ArrayList<MenuItem>();
 		sides.add(fries); sides.add(chips); sides.add(coleslaw);
 		
-		Tables tables = new Tables(3, 4);
+		Table tables = new Table(3, 4);
 		Order order = new Order(tables, entrees, sides);
 		Payment.pay(order);
 	}
