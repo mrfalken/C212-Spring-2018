@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Tables 
+public class Tables
 {
 	private int tableNum;
 	private int seatsFilled;
