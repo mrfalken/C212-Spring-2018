@@ -44,10 +44,6 @@ public class SeatingChart
 		}
 	}
 
-	public static ArrayList<Table> gettables()
-	{
-		return tables;
-	}
 
 	public static Table getTableByNum(int n)
 	{
