@@ -16,29 +16,18 @@ public class Main
 			while (run == true)
 			{	
 				System.out.println("What would you like to do today?");
-				System.out.println("1. Place Order");
-				System.out.println("2. Process Payment");
-				System.out.println("3. Change Order");
-				System.out.println("4. Seat Table");
-				System.out.println("5. Clear Table");
+				System.out.println("1. Seat Table");
+				System.out.println("2. Place Order");
+				System.out.println("3. Process Payment");
+				System.out.println("4. Clear Table");
 
 				///MANAGER _ADD/DELETE SERVERS // APPLY DISCOUNTS TO BILL (Any discount)//
-				System.out.println("6. Logout");
+				System.out.println("5. Logout");
 				int o = keyboard.nextInt();
 
+				
+			
 				if (o == 1)
-				{
-					Order.placeOrder();
-				}
-				else if (o == 2)
-				{
-
-				}
-				else if (o == 3)
-				{
-
-				}
-				else if (o == 4)
 				{
 					System.out.println("Please enter the table number you would like to seat 0-29");
 					int tn = keyboard.nextInt();
@@ -69,18 +58,34 @@ public class Main
 					}
 					SeatingChart.printChart();
 				}
-
-				else if (o == 5)
+				
+				else if (o == 2)
 				{
-					System.out.println("Please enter the table number you would like to clear");
-					int tn = keyboard.nextInt();
+					Order.placeOrder();
+				}
+				
+				else if (0 == 3)
+				{
+					
+					
+				}
 
+				else if (o == 4)
+				{
+					System.out.println("Please enter the table number you would like to clear 0-29");
+					int tn = keyboard.nextInt();
+					while (tn >= 28 || tn <= -1)
+					{
+						System.out.println("Invalid Input. Please Enter A number 0-29");
+						tn = keyboard.nextInt();
+						
+					}
 					SeatingChart.clearTable(tn);
 
 					SeatingChart.printChart();
 				}
 
-				else if (o == 6)
+				else if (o == 5)
 				{
 					System.out.println("Logged Out");
 					run = false;
