@@ -95,5 +95,4 @@ public class Payment
 		Order order = new Order(tables, entrees, sides);
 		Payment.pay(order);
 	}
-	
 }
