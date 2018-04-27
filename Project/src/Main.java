@@ -61,13 +61,23 @@ public class Main
 				
 				else if (o == 2)
 				{
-					Order.placeOrder();
+					System.out.println("Which table number would you like to place an entree for? ");
+					int tn = keyboard.nextInt();
+					Order tablesOrder = Order.placeOrder(tn);
+					SeatingChart.getTables().get(tn).setOrder(tablesOrder);
 				}
 				
-				else if (0 == 3)
+				else if (o == 3)
 				{
-					
-					
+					try {
+						System.out.println("Which table is paying?: ");
+						int tn = keyboard.nextInt();
+						Payment.pay(SeatingChart.getTables().get(tn).getOrder());
+					} catch (NullPointerException e) 
+					{
+						System.out.println("That table has not yet placed an order");
+						continue;
+					}
 				}
 
 				else if (o == 4)
