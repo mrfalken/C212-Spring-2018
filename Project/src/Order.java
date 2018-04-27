@@ -41,21 +41,15 @@ public class Order
 
 	//assigning the items to  menu array 
 
-	public static Order placeOrder() {
-		System.out.println("Which table number would you like to place an entree for? ");
+	public static Order placeOrder(int tn) 
+	{
 		Scanner scan = new Scanner(System.in);
-		int tn = scan.nextInt();
-		while (tn > 30 || tn < 1)
+		while (tn > 29 || tn < 0)
 		{
 			System.out.println("The Table you selected does not exist. Please enter a Table number between 0-29: ");
 			tn = scan.nextInt();
 		}
-		{
-			System.out.println("The Table you selected is empty, please choose a Table Number that has people at it: ");
-			SeatingChart.printChart();
-			tn = scan.nextInt();
-
-		}
+	
 		while (SeatingChart.getTables().get(tn).getSeatsFilled() == 0)
 		{
 			System.out.println("The Table you selected is empty, please choose a Table Number that has people at it: ");

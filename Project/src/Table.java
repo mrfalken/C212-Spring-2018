@@ -5,25 +5,16 @@ public class Table
 {
 	private  int tableNum;
 	private int seatsFilled;
-	
-	
-	
-	
+	private Order tableOrder;
 	
 	public Table(int num, int seatsF)
 	{
 		Scanner s = new Scanner(System.in);
-		
-		
-		
 		while (seatsF >= 4 && seatsF <= 0)
 		{
 			System.out.println("A table can only fit four people. Please enter a number of occupants between 1-4");
 			seatsF = s.nextInt();
-			
 		}
-		
-		
 	
 		tableNum = num;
 		seatsFilled = seatsF;
@@ -57,6 +48,15 @@ public class Table
 		return true;
 	}
 	
+	public void setOrder(Order newOrder)
+	{
+		tableOrder = newOrder;
+	}
+	
+	public Order getOrder()
+	{
+		return tableOrder;
+	}
 	
 	public String toString()
 	{

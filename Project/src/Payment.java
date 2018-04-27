@@ -49,7 +49,7 @@ public class Payment
 			if(paymentMethod.equalsIgnoreCase("card"))
 			{
 				System.out.print("Please input the card number: ");
-				int cardNumber = inputReader.nextInt();
+				long cardNumber = inputReader.nextInt();
 				System.out.println("Please enter your pin number: ");
 				int pinNumber = inputReader.nextInt();
 				paymentCorrect = true; 
