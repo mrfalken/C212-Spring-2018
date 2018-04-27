@@ -6,20 +6,8 @@ public class Server
 	public Server()
 	{ }
 	
-	public Server(String user, String pass)
-	{
-		Login.login();
-	}
-	
-	public void takeOrder()
+	public void viewTables()
 	{
 		
 	}
-	
-	public void viewPreviousTables()
-	{
-		
-	}
-	
-	
 }
